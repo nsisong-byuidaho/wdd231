@@ -80,6 +80,7 @@ const courses = [
 
 const doc = document;
 
+
 createCoursesCard(courses);
 displayCourseWork(courses);
 
@@ -89,14 +90,18 @@ const wddlink = doc.querySelector("#wdd");
 
 alllink.addEventListener('click', () => {
     console.clear();
+
     let allcourses = courses;
+
     createCoursesCard(allcourses);
     displayCourseWork(allcourses);
 })
 
 cselink.addEventListener('click', () => {
     console.clear();
+
     let csecourses = courses.filter(courses => courses.subject.includes('CSE'));
+
     createCoursesCard(csecourses);
     displayCourseWork(csecourses);
 })
@@ -108,6 +113,44 @@ wddlink.addEventListener('click', () => {
     displayCourseWork(wddcourses);
 })
 
+function displayCourseWork(courses) {
+
+    let creditTotal = 0;
+
+    doc.querySelector("#course-container").innerHTML = "";
+
+    let info = doc.createElement("div");
+    info.classList.add("course-container");
+
+    courses.forEach(course => {
+        creditTotal += course.credits;
+
+        let classtitle = `${course.subject} ${course.number} - ${course.title}`;
+        let classcredits = course.credits;
+       
+
+        let infoText = doc.createElement("p");
+        infoText.classList.add("courses");
+        infoText.innerHTML = `${classtitle}`;
+
+        let creditText = doc.createElement("p");
+        creditText.innerHTML = `${classcredits} credits`;
+
+        doc.querySelector("#course-container").appendChild(infoText);
+        doc.querySelector("#course-container").appendChild(creditText);
+    })
+
+    let infoText = doc.createElement("p");
+    infoText.classList.add("courses");
+    infoText.innerHTML = `Total Credits`;
+
+    let creditText = doc.createElement("p");
+    creditText.innerHTML = `${creditTotal} credits`;
+
+    doc.querySelector("#course-container").appendChild(infoText);
+    doc.querySelector("#course-container").appendChild(creditText);
+}
+
 function createCoursesCard(filteredcourses) {
 
     doc.querySelector(".container").innerHTML = "";
@@ -115,7 +158,7 @@ function createCoursesCard(filteredcourses) {
     filteredcourses.forEach(course => {
 
         let done = course.completed;
-
+    
         let card = doc.createElement("div");
         card.classList.add("card");
 
@@ -128,7 +171,6 @@ function createCoursesCard(filteredcourses) {
         }
 
         let courseNameStr = `${course.subject}${course.number}`
-
         coursename.innerHTML = courseNameStr;
 
         card.appendChild(coursename);
