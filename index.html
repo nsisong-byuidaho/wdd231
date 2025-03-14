@@ -3,9 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231</title>
+    <meta name="description" content="Course Home Page - WDD 231 - Web Frontend Development I">
+    <meta name="author" content="Nsisong Akpanudo">
+    <title>WDD 231 - Course Home Page - Nsisong Akpanudo</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
+
 <body>
-    <h1>WDD 231 - Nsisong Akpanudo</h1>
+    <header>
+        <div class="head">
+             <picture>
+                <img src="images/IMG_9704.jpg" alt="Nsisong Akpanudo" width="100" height="100">
+             </picture>
+            <h1>Nsisong Akpanudo</h1>
+            <!-- <h1>WDD 231: Web Frontend Development I - Nsisong Akpanudo</h1> -->
+        </div>
+
+        <div>
+            <button type="button" id="menu" aria-label="Hamburger Button"></button>
+        </div>
+
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="chamber.html">Chamber</a>
+            <a href="https://github.com/nsisong-byuidaho">GitHub Profile</a>
+            <a href="https://www.linkedin.com/in/nsisong-akpanudo-1a42a63a">LinkedIn</a>
+        </nav>
+    </header>
+    <p>Home</p>
+    <main id="grid-container">
+        <section class="rounded-box1">
+            <h2>Course Work</h2>
+            <div id="course-container">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="rounded-box2">
+            <h2>Abuja, Nigeria</h2> 
+            <figure>
+            <img src="images/Abuja-hero-small.webp" alt="A scenic view of Abuja's rolling hills and natural beauty" height="300" width="250">
+            <figcaption>Abuja Natural View</figcaption>
+            </figure>
+        </section>
+
+        <section class="rounded-box3">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div>
+                <nav class="selector">
+                    <a href="#" id="all" aria-label="Show All Classes"> All </a>
+                    <a href="#" id="cse" aria-label="Show CSE Classes"> CSE </a>
+                    <a href="#" id="wdd" aria-label="Show WDD Classes"> WDD </a>
+                </nav>
+            </div>
+            <div class="container">
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span>🏋️‍♀️ Nsisong Akpanudo.🏋️‍♀️ Nigeria.</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
+
 </html>

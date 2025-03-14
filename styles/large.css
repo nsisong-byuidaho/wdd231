@@ -1,0 +1,61 @@
+/* Larger Views ******************************/
+@media screen and (min-width: 650px) {
+	nav {
+		display: flex;
+        flex: 1 1 100%;
+	}
+
+    header {
+        padding: 0px;
+        background-color: var(--back_color2);
+        color: var(--accent_color3);
+        border: 1px solid var(--back_color2);
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #grid-container {
+        display: grid;
+        column-gap: 0.5rem;
+        width: 100%;
+        margin: 0.5rem auto;
+        grid-template-columns: 2fr minmax(200px, 1fr);
+        max-width: 1200px;
+        
+    }
+
+     /* hide hamburger button */
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        flex-direction: row;
+    }
+
+    .navigation a {
+        display: block;
+        flex: 1 1 100%;
+    }
+          
+    .navigation a:hover {
+        font-weight: 700;
+        color: var(--back_color1);
+        background-color: var(--active_yellow);
+        text-decoration: underline;
+        text-decoration-color: var(--wild_red);
+    }
+
+    .stuff {
+        margin: 1rem auto;
+    }
+}
