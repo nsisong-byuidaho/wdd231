@@ -1,0 +1,48 @@
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 1em;
+    background-color: #fff;
+    box-shadow: 0 0 .5em black;
+}
+
+header {
+    background-color: #19063d;
+    color: #fff;
+    margin: auto auto 1em;
+    max-width: 900px;
+    padding: 1em;
+}
+h1 {
+    border-bottom: #fff 1px solid;
+}
+
+#cards {
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1em;
+    padding: 1em;
+}
+
+#cards h2 {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#cards img {
+    width: 100%;
+}
+
+#cards section {
+    margin: .5em auto;
+    background-color: #ddd;
+    padding: .5em;
+    border: 1px rgb(189, 189, 189) solid;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+}
