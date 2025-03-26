@@ -1,0 +1,36 @@
+@media screen and (min-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    /* Grid Layout for Chamber Members */
+    .grid-view {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Increased minimum size */
+        gap: 20px;
+    }
+
+    .grid-view .member-card {
+        width: auto;
+    }
+
+    /* List View Styling */
+    .list-view .member-card {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* View Toggle Layout */
+    .view-toggle {
+        justify-content: flex-start;
+    }
+}

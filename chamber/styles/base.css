@@ -1,0 +1,127 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    background-color: #0e024a;
+}
+
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+/* View Toggle Buttons */
+.view-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.view-toggle button {
+    background-color: #00509e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.view-toggle button:hover {
+    background-color: #003366;
+}
+
+/* Directory Styles */
+#members-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Grid View: Ensures 3 columns */
+.grid-view .member-card {
+    width: calc(33.333% - 20px);
+    max-width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+/* List View: Aligns items properly */
+.list-view .member-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    gap: 15px;
+}
+
+/* Membership Level Badge */
+.membership-level {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.level-Gold {
+    background-color: gold;
+    color: black;
+}
+
+.level-Silver {
+    background-color: silver;
+    color: black;
+}
+
+.level-Bronze {
+    background-color: #cd7f32;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
