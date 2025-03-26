@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce - Home</title>
+    <meta name="description" content="Home page for the Chamber of Commerce in Eket">
+    <meta name="author" content="Nsisong Akpanudo">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="icon" href="images/favicon.ico">
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/index.js" defer></script> 
+</head>
+<body>
+
+    <header>
+        <img src="images/logo.webp" alt="Chamber of Commerce Logo" width="74" height="74">
+        <p>Chamber of Commerce</p>
+        <button id="menu"></button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="images/hero.jpg" alt="Welcome to the Chamber">
+            <div class="hero-text">
+                <h1>Welcome to the Chamber of Commerce</h1>
+                <p>Empowering businesses for a thriving community.</p>
+                <a href="join.html" class="cta-button">Join Us</a>
+            </div>
+        </section>
+
+        <!-- Current Events -->
+        <section class="events">
+            <h2>Upcoming Events</h2>
+            <p>Stay tuned for the latest events happening in our community!</p>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather">
+            <h2>Current Weather</h2>
+            <p><span id="temperature"></span>°C - <span id="description"></span></p>
+            <h3>3-Day Forecast</h3>
+            <ul id="forecast"></ul>
+        </section>
+
+        <!-- Spotlight Section -->
+        <section class="spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-container">
+                <!-- JavaScript will populate this section -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Chamber of Commerce | Nsisong Akpanudo | WDD 231</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>
