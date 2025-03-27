@@ -1,47 +1,71 @@
-const apiKey = "YOUR_OPENWEATHERMAP_API_KEY";
-const city = "Eket"; 
 
-async function fetchWeather() {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-    const response = await fetch(url);
-    const data = await response.json();
-    
-    document.getElementById("temperature").textContent = Math.round(data.main.temp);
-    document.getElementById("description").textContent = data.weather[0].description;
-}
-
-// Run function when page loads
-fetchWeather();
-
+// Function to fetch and display spotlight members
 async function loadSpotlights() {
-    const response = await fetch("data/members.json");
-    const members = await response.json();
+    const spotlightContainer = document.getElementById("spotlight-container");
 
-    // Filter only Gold and Silver members
-    const spotlightMembers = members.filter(member => 
-        member.membershipLevel === "Gold" || member.membershipLevel === "Silver"
-    );
+    if (!spotlightContainer) {
+        console.error("❌ ERROR: Element with ID 'spotlight-container' not found.");
+        return;
+    }
 
-    // Randomly select 2 or 3 members
-    const selectedSpotlights = spotlightMembers.sort(() => 0.5 - Math.random()).slice(0, 3);
+    try {
+        console.log("📢 Fetching members data...");
+        const response = await fetch("data/members.json"); 
 
-    const container = document.getElementById("spotlight-container");
-    container.innerHTML = "";
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
 
-    selectedSpotlights.forEach(member => {
-        const card = document.createElement("div");
-        card.classList.add("spotlight-card");
-        card.innerHTML = `
-            <img src="${member.logo}" alt="${member.name} Logo">
-            <h3>${member.name}</h3>
-            <p>${member.address}</p>
-            <p>${member.phone}</p>
-            <a href="${member.website}" target="_blank">Visit Website</a>
-            <p class="membership">${member.membershipLevel} Member</p>
-        `;
-        container.appendChild(card);
-    });
+        const data = await response.json();
+        console.log("✅ Members Data Loaded:", data);
+
+        if (!data || !Array.isArray(data)) {
+            throw new Error("❌ ERROR: Invalid data structure - Expected an array.");
+        }
+
+        // 🔹 Filter only "Gold" and "Silver" members
+        const spotlightMembers = data.filter(member => 
+            member.membership === "Gold" || member.membership === "Silver"
+        );
+
+        if (spotlightMembers.length === 0) {
+            console.warn("⚠️ No Gold or Silver members found.");
+            return;
+        }
+
+        // 🔀 Shuffle and pick 2 or 3 members
+        const shuffled = spotlightMembers.sort(() => Math.random() - 0.5);
+        const selectedMembers = shuffled.slice(0, Math.floor(Math.random() * 2) + 2);
+
+ 
+        spotlightContainer.innerHTML = "";
+
+        // 🔹 Display the spotlight members
+        selectedMembers.forEach(member => {
+            const memberCard = document.createElement("div");
+            memberCard.classList.add("spotlight-card");
+            memberCard.innerHTML = `
+                <div class="spotlight-content">
+                    <img src="${member.image}" alt="${member.name} Logo">
+                    <h3>${member.name}</h3>
+                    <p><strong>Membership:</strong> ${member.membership} Member</p>
+                    <p><strong>Phone:</strong> ${member.phone}</p>
+                    <p><strong>Address:</strong> ${member.address}</p>
+                    <a href="${member.website}" target="_blank">🌐 Visit Website</a>
+                </div>
+            `;
+            spotlightContainer.appendChild(memberCard);
+        });
+
+        console.log("✅ Spotlight members displayed successfully.");
+
+    } catch (error) {
+        console.error("❌ ERROR fetching members data:", error);
+    }
 }
 
-// Run function when page loads
-loadSpotlights();
+// Run functions when the page loads
+document.addEventListener("DOMContentLoaded", () => {
+    updateFooter();
+    loadSpotlights();
+});

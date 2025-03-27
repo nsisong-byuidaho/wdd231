@@ -5,7 +5,7 @@
         "phone": "+234 705 355 5647",
         "website": "https://techsolutions.com",
         "image": "images/tech-solutions.jpg",
-        "membership": 3
+        "membership": "Gold"
     },
     {
         "name": "Green Earth Landscaping",
@@ -13,7 +13,7 @@
         "phone": "+234 834 325 5547",
         "website": "https://greenearth.com",
         "image": "images/green-earth.jpg",
-        "membership": 2
+        "membership": "Silver"
     },
     {
         "name": "The Coffee Spot",
@@ -21,7 +21,8 @@
         "phone": "+234 905 345 5677",
         "website": "https://coffeespot.com",
         "image": "images/coffee-spot.jpg",
-        "membership": 1
+        "membership": "Silver"
+        
     },
     {
         "name": "Green Agrotech",
@@ -29,7 +30,7 @@
         "phone": "+234 803 456 7890",
         "website": "https://greenagrotech.com",
         "image": "images/green-agrotech.jpg",
-        "membership": 3
+        "membership": "Gold"
     },
     {
         "name": "Healthy Living Gym",
@@ -37,7 +38,7 @@
         "phone": "+234 705 347 5697",
         "website": "https://healthylivinggym.com",
         "image": "images/healthy-living-gym.jpg",
-        "membership": 2
+        "membership": "Silver"
     },
     {
         "name": "Eket Business Hub",
@@ -45,7 +46,7 @@
         "phone": "+234 802 315 6789",
         "website": "https://eketbusinesshub.com",
         "image": "images/eket-business-hub.jpg",
-        "membership": 1
+        "membership": "Gold"
     },
     {
         "name": "Blue Sky Travel Agency",
@@ -53,6 +54,6 @@
         "phone": "+234 802 345 5327",
         "website": "https://blueskytravel.com",
         "image": "images/blue-sky-travel-agency.jpg",
-        "membership": 3
+        "membership": "Gold"
     }
 ]

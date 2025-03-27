@@ -1,26 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce - Home</title>
-    <meta name="description" content="Home page for the Chamber of Commerce in Eket">
+    <title>WDD 231 - Chamber of Commerce - Home Page</title>
+    <meta name="description" content="Welcome to the Chamber of Commerce. Join us to connect, grow, and contribute to a thriving business community in Eket.">
     <meta name="author" content="Nsisong Akpanudo">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Chamber of Commerce - Home">
+    <meta property="og:description" content="Connect with local businesses and grow your network through the Chamber of Commerce.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://nsisong-byuidaho.github.io/wdd231/images/logo.webp">
+    <meta property="og:url" content="https://nsisong-byuidaho.github.io/wdd231/chamber/index.html">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico">
+
+    <!-- JavaScript -->
     <script src="scripts/menu.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
-    <script src="scripts/index.js" defer></script> 
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+
 </head>
+
 <body>
 
     <header>
         <img src="images/logo.webp" alt="Chamber of Commerce Logo" width="74" height="74">
         <p>Chamber of Commerce</p>
-        <button id="menu"></button>
-        <nav>
+        <button id="menu" aria-label="Open Menu">&#9776;</button>
+        <nav aria-label="Main Navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
@@ -31,10 +54,13 @@
     </header>
 
     <main>
-
         <!-- Hero Section -->
         <section class="hero">
-            <img src="images/hero.jpg" alt="Welcome to the Chamber">
+            <picture>
+                <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
+                <source media="(min-width: 500px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-small.webp" alt="Welcome to the Chamber">
+            </picture>
             <div class="hero-text">
                 <h1>Welcome to the Chamber of Commerce</h1>
                 <p>Empowering businesses for a thriving community.</p>
@@ -45,17 +71,32 @@
         <!-- Current Events -->
         <section class="events">
             <h2>Upcoming Events</h2>
-            <p>Stay tuned for the latest events happening in our community!</p>
+            <ul>
+                <li>
+                    <h3>Networking Night</h3>
+                    <p>Join us for an exciting networking event with local businesses!</p>
+                </li>
+                <li>
+                    <h3>Annual Trade Show</h3>
+                    <p>Don't miss the annual trade show, showcasing local products and services!</p>
+                </li>
+            </ul>
         </section>
 
         <!-- Weather Section -->
         <section class="weather">
-            <h2>Current Weather</h2>
-            <p><span id="temperature"></span>°C - <span id="description"></span></p>
-            <h3>3-Day Forecast</h3>
-            <ul id="forecast"></ul>
+            <h2>Current Weather in Eket</h2>
+            <p>Temperature: <span id="current-temp">--</span></p>
+            <p>Description: <span id="weather-desc">--</span></p>
+            <p>Wind Speed: <span id="windspeed">--</span></p>
+            <img id="weather-icon" src="" alt="Weather icon" width="50">
         </section>
-
+        
+        <section class="forecast">
+            <h2>3-Day Forecast</h2>
+            <div id="forecast"></div>
+        </section>
+        
         <!-- Spotlight Section -->
         <section class="spotlights">
             <h2>Member Spotlights</h2>
