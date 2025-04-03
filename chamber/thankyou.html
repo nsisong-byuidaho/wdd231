@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Chamber of Commerce - Thank You Page</title>
+    <meta name="description" content="Thank you for joining us.">
+    <meta name="author" content="Nsisong Akpanudo">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Chamber of Commerce - Thank You">
+    <meta property="og:description" content="Thank you for joining us.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://nsisong-byuidaho.github.io/wdd231/images/logo.webp">
+    <meta property="og:url" content="https://nsisong-byuidaho.github.io/wdd231/chamber/thankyou.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- JavaScript -->
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/modal.js" defer></script> <!-- Link to the new JavaScript file -->
+</head>
+
+<body>
+
+<header>
+    <h1>Thank You for Joining!</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section class="thank-you">
+        <h2>Your Membership Application has been Submitted</h2>
+        <p>Thank you for applying to join our Chamber of Commerce! Below are the details you provided:</p>
+
+        <div class="form-details">
+            <p><strong>First Name:</strong> <span id="firstName">N/A</span></p>
+            <p><strong>Last Name:</strong> <span id="lastName">N/A</span></p>
+            <p><strong>Email:</strong> <span id="email">N/A</span></p>
+            <p><strong>Mobile:</strong> <span id="mobile">N/A</span></p>
+            <p><strong>Business/Organization Name:</strong> <span id="businessName">N/A</span></p>
+            <p><strong>Submitted On:</strong> <span id="submittedTimestamp">N/A</span></p>
+        </div>
+
+        <p>We will review your application and get back to you soon!</p>
+        <a href="index.html" class="button">Return to Home</a>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; <span id="currentyear"></span> Chamber of Commerce | Nsisong Akpanudo | WDD 231</p>
+    <p id="lastModified"></p>
+</footer>
+
+</body>
+</html>

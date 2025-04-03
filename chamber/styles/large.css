@@ -54,3 +54,25 @@
         justify-content: flex-start;
     }
 }
+@media (min-width: 768px) {
+    /* Apply only on the join page */
+    .join-page .membership-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .join-page main {
+        display: flex;
+        gap: 20px;
+    }
+
+    .join-page form {
+        width: 60%;
+    }
+
+    .join-page .membership-cards {
+        width: 40%;
+        grid-template-columns: 1fr;
+    }
+}

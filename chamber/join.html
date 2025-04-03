@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Chamber of Commerce - Join Page</title>
+    <meta name="description" content="Join us to connect, grow, and contribute to a thriving business community in Eket.">
+    <meta name="author" content="Nsisong Akpanudo">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Chamber of Commerce - Join">
+    <meta property="og:description" content="Join us today and grow your network through the Chamber of Commerce.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://nsisong-byuidaho.github.io/wdd231/images/logo.webp">
+    <meta property="og:url" content="https://nsisong-byuidaho.github.io/wdd231/chamber/join.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- JavaScript -->
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/modal.js" defer></script>
+
+</head>
+<body class="join-page">
+
+    <header>
+        <h1>Join Our Chamber of Commerce</h1>
+        <nav>
+            <button id="menu" class="ham-button">
+                ☰
+            </button>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Membership Application</h2>
+
+        <!-- Membership Form -->
+        <form action="thankyou.html" method="get">
+            <label>First Name: 
+                <input type="text" name="firstName" title="Enter your first name" autocomplete="given-name" required>
+            </label>
+        
+            <label>Last Name: 
+                <input type="text" name="lastName" title="Enter your last name" autocomplete="family-name" required>
+            </label>
+        
+            <label>Organization Title: 
+                <input type="text" name="organizationTitle" title="Your role in the organization" pattern="[A-Za-z\s-]{7,}" autocomplete="organization-title">
+            </label>
+        
+            <label>Email: 
+                <input type="email" name="email" title="Enter your email" placeholder="example@domain.com" autocomplete="email" required>
+            </label>
+        
+            <label>Phone Number: 
+                <input type="tel" name="mobile" title="Enter your mobile number" autocomplete="tel" required>
+            </label>
+        
+            <label>Business/Organization Name: 
+                <input type="text" name="businessName" title="Enter your business name" autocomplete="organization" required>
+            </label>
+        
+            <label>Membership Level: 
+                <select name="membershipLevel" title="Choose a membership level">
+                    <option value="NP">Non-Profit (Free)</option>
+                    <option value="Bronze">Bronze</option>
+                    <option value="Silver">Silver</option>
+                    <option value="Gold">Gold</option>
+                </select>
+            </label>
+        
+            <label>Business Description:
+                <textarea name="description" title="Describe your business"></textarea>
+            </label>
+        
+            <input type="hidden" id="timestamp" name="timestamp">
+        
+            <input type="submit" value="Apply Now">
+        </form>        
+
+        <!-- Membership Cards -->
+        <section class="membership-cards">
+            <div class="card">
+                <h3>Non-Profit</h3>
+                <p>Free membership for non-profit organizations.</p>
+                <button onclick="openModal('modal-np')">View Benefits</button>
+            </div>
+
+            <div class="card">
+                <h3>Bronze Membership</h3>
+                <p>Basic business benefits at an affordable rate.</p>
+                <button onclick="openModal('modal-bronze')">View Benefits</button>
+            </div>
+
+            <div class="card">
+                <h3>Silver Membership</h3>
+                <p>Enhanced features and event access.</p>
+                <button onclick="openModal('modal-silver')">View Benefits</button>
+            </div>
+
+            <div class="card">
+                <h3>Gold Membership</h3>
+                <p>Premium membership with exclusive perks.</p>
+                <button onclick="openModal('modal-gold')">View Benefits</button>
+            </div>
+        </section>
+
+        <!-- Modals for Membership Benefits -->
+        <div id="modal-np" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-np')">&times;</span>
+                <h2>Non-Profit Membership Benefits</h2>
+                <p>Exclusive networking and community support.</p>
+            </div>
+        </div>
+
+        <div id="modal-bronze" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-bronze')">&times;</span>
+                <h2>Bronze Membership Benefits</h2>
+                <p>Discounts, listings in directory, and networking events.</p>
+            </div>
+        </div>
+
+        <div id="modal-silver" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-silver')">&times;</span>
+                <h2>Silver Membership Benefits</h2>
+                <p>Advertising opportunities, sponsorships, and workshops.</p>
+            </div>
+        </div>
+
+        <div id="modal-gold" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-gold')">&times;</span>
+                <h2>Gold Membership Benefits</h2>
+                <p>VIP access to events, featured directory listing, and more.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Chamber of Commerce | Nsisong Akpanudo | WDD 231</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>
