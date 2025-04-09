@@ -1,0 +1,51 @@
+[
+    {
+      "name": "Eket City Park",
+      "image": "images/eket-city-park.webp",
+      "address": "123 Oron Road, Eket",
+      "description": "A spacious urban park featuring playgrounds, walking trails, and picnic areas for the whole family."
+    },
+    {
+      "name": "Eket Museum",
+      "image": "images/eket-museum.webp",
+      "address": "456 Gracebill Road, Eket",
+      "description": "Explore the rich heritage of the area with exhibits from the pioneer era to modern times."
+    },
+    {
+      "name": "Urua Nka Market",
+      "image": "images/urua-nka-market.webp",
+      "address": "89 Market Road, Eket",
+      "description": "A bustling weekend market with local vendors, crafts, and fresh produce."
+    },
+    {
+      "name": "Eket city Lake",
+      "image": "images/eket-city-lake.webp",
+      "address": "10 Lakeview Road, Eket",
+      "description": "Enjoy kayaking, paddleboarding, and stunning lake views at this popular outdoor spot."
+    },
+    {
+      "name": "Sunset Theater",
+      "image": "images/sunset-theater.webp",
+      "address": "20 Arts Ave, Eket",
+      "description": "A renovated classic theater showing indie films, live performances, and local productions."
+    },
+    {
+      "name": "Botanical Gardens",
+      "image": "images/botanical-gardens.webp",
+      "address": "30 Bloom Way, Eket",
+      "description": "Wander through beautifully curated gardens featuring regional plants and seasonal blooms."
+    },
+    {
+      "name": " Eket Tech Innovation Hub",
+      "image": "images/eket-tech-hub.webp",
+      "address": "40 IBB way, Eket",
+      "description": "A collaborative space for startups and tech companies driving innovation in the region."
+    },
+    {
+      "name": "Eket Sports Center",
+      "image": "images/eket-sports-center.webp",
+      "address": "50 Stadium Road, Eket",
+      "description": "Enjoy in the best recreational center in the area."
+    }
+  ]
+  

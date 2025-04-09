@@ -76,3 +76,110 @@
         grid-template-columns: 1fr;
     }
 }
+/* === Discover Page Layout === */
+
+.discover-layout {
+    display: grid;
+    grid-template-areas:
+      "visit"
+      "cards";
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .visit-message {
+    grid-area: visit;
+    background-color: #fffae6;
+    padding: 1rem;
+    border-left: 4px solid #ffa500;
+    font-weight: bold;
+  }
+  
+  .cards-grid {
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .card figure {
+    margin: 0;
+  }
+  
+  .card img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .card h2 {
+    font-size: 1.2rem;
+    margin: 0.75rem;
+  }
+  
+  .card address,
+  .card p {
+    padding: 1rem;
+    font-size: 1rem;
+    
+  }
+  
+  
+  /* === Hover effect for desktop only === */
+  @media (min-width: 641px) {
+    .card:hover {
+      transform: scale(1.02);
+    }
+  
+    .card:hover img {
+      transform: scale(1.05);
+    }
+  }
+  
+  /* === Medium Screens === */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .discover-layout {
+      grid-template-areas:
+        "visit"
+        "cards";
+    }
+  
+    .cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* === Large Screens === */
+  @media (min-width: 1025px) {
+    .discover-layout {
+      grid-template-areas:
+        "visit cards";
+      grid-template-columns: 250px 1fr;
+    }
+  
+    .cards-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .visit-message.show-message {
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+      
+      
+}
+
+@media screen and (min-width: 1025px) {
+    .cards-grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "card1 card2 card3"
+        "card4 card5 card6"
+        "card7 card8 .";
+    }
+  }

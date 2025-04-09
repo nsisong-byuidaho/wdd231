@@ -337,6 +337,7 @@ input[type="submit"]:hover {
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 1s ease-out forwards;
+    
 }
 
 .card h3 {
@@ -415,7 +416,6 @@ input[type="submit"]:hover {
     display: none; /* Hide navigation by default */
 }
 
-/* Add this to show the menu when 'open' class is added */
 .navigation.open {
     display: flex; /* Display the menu when open */
     flex-direction: column; /* Stack the items vertically */
@@ -445,3 +445,27 @@ input[type="submit"]:hover {
         display: block;
     }
 }
+@media screen and (max-width: 640px) {
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+    }
+  }
+  .visit-message {
+    padding: 1rem;
+    background-color: #fff8dc;
+    border-left: 4px solid orange;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
