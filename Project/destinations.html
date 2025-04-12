@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the best travel destinations around the world.">
+    <title>Travel Agency - Destinations</title>
+    <meta name="author" content="Okoli Travels">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Okoli Travels - Explore the World">
+    <meta property="og:description" content="Discover your next adventure with Okoli Travels.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://nsisong-byuidaho.github.io/wdd231/Project/images/hero-small.webp">
+    <meta property="og:url" content="https://nsisong-byuidaho.github.io/wdd231/Project/destination.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/base.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- JavaScript -->
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/book.js" defer></script>
+    <script src="scripts/confirmation.js" defer></script>
+    <script src="scripts/destinations.js" defer></script>
+    <script src="scripts/data.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Okoli Travels</h1>
+    <nav>
+        <button id="menu" class="ham-button">
+            ☰
+        </button>
+        <ul class="navigation">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="book.html">Book a Trip</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+        <h2>Explore Our Top Destinations</h2>
+        <div class="destination-grid" id="destinationContainer"></div>
+      </main>
+    
+      <!-- Modal -->
+      <div id="modal" class="modal"></div>
+
+      <footer>
+        <p>&copy; 2025 Okoli Travels | Adventure. Experience. Explore.</p> Okoli Travels. All rights reserved. </p>
+      </footer>
+    <script type="module" src="scripts/app.js"></script>
+
+</body>
+</html>

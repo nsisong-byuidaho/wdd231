@@ -1,0 +1,123 @@
+[
+    {
+      "name": "Paris",
+      "location": "France",
+      "description": "The city of lights, romance, and the Eiffel Tower.",
+      "image": "images/paris.jpg",
+      "price": 1200,
+      "duration": "5 days"
+    },
+    {
+      "name": "Tokyo",
+      "location": "Japan",
+      "description": "A vibrant mix of tradition and cutting-edge technology.",
+      "image": "images/tokyo.jpg",
+      "price": 1500,
+      "duration": "7 days"
+    },
+    {
+      "name": "Victoria Falls",
+      "location": "Zambia",
+      "description": "Experience the thunder of one of the largest waterfalls on Earth.",
+      "image": "images/victoria-falls.jpg",
+      "price": 1300,
+      "duration": "4 days"
+    },
+    {
+      "name": "Bali",
+      "location": "Indonesia",
+      "description": "A tropical paradise with beaches, temples, and jungles.",
+      "image": "images/bali.jpg",
+      "price": 1000,
+      "duration": "6 days"
+    },
+    {
+      "name": "New York City",
+      "location": "USA",
+      "description": "The city that never sleeps. See the skyline, Broadway, and more.",
+      "image": "images/nyc.jpg",
+      "price": 1400,
+      "duration": "4 days"
+    },
+    {
+      "name": "Machu Picchu",
+      "location": "Peru",
+      "description": "Mystical ruins nestled in the Andes mountains.",
+      "image": "images/machu-picchu.jpg",
+      "price": 1600,
+      "duration": "6 days"
+    },
+    {
+      "name": "Cairo",
+      "location": "Egypt",
+      "description": "Explore the pyramids, Nile River, and ancient temples.",
+      "image": "images/cairo.jpg",
+      "price": 1100,
+      "duration": "5 days"
+    },
+    {
+      "name": "Santorini",
+      "location": "Greece",
+      "description": "A stunning island with blue domes and cliffside views.",
+      "image": "images/santorini.jpg",
+      "price": 1250,
+      "duration": "5 days"
+    },
+    {
+      "name": "Sydney",
+      "location": "Australia",
+      "description": "Iconic harbor, Opera House, and beach life.",
+      "image": "images/sydney.jpg",
+      "price": 1800,
+      "duration": "7 days"
+    },
+    {
+      "name": "Dubai",
+      "location": "UAE",
+      "description": "Luxury, skyscrapers, desert safaris, and shopping galore.",
+      "image": "images/dubai.jpg",
+      "price": 1600,
+      "duration": "5 days"
+    },
+    {
+      "name": "Banff",
+      "location": "Canada",
+      "description": "Glacier lakes, rugged mountains, and serene forests.",
+      "image": "images/banff.jpg",
+      "price": 1350,
+      "duration": "4 days"
+    },
+    {
+      "name": "Rome",
+      "location": "Italy",
+      "description": "Walk the Colosseum, Vatican, and eat gelato at sunset.",
+      "image": "images/rome.jpg",
+      "price": 1150,
+      "duration": "6 days"
+    },
+    {
+      "name": "Reykjavik",
+      "location": "Iceland",
+      "description": "Northern lights, glaciers, and geothermal hot springs.",
+      "image": "images/iceland.jpg",
+      "price": 1700,
+      "duration": "6 days"
+    },
+    {
+      "name": "Cape Town",
+      "location": "South Africa",
+      "description": "Table Mountain, vineyards, and incredible coastlines.",
+      "image": "images/cape-town.jpg",
+      "price": 1450,
+      "duration": "6 days"
+    },
+    {
+      "name": "Petra",
+      "location": "Jordan",
+      "description": "An archaeological wonder carved into rose-red rock.",
+      "image": "images/petra.jpg",
+      "price": 1400,
+      "duration": "5 days"
+    }
+  ]
+  

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your next adventure with our easy-to-use booking form.">
+    <title>Okoli Travels - Booking</title>
+    <meta name="author" content="Okoli Travels">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Okoli Travels - Explore the World">
+    <meta property="og:description" content="Book your next adventure with Okoli Travels.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://nsisong-byuidaho.github.io/wdd231/Project/images/hero-small.webp">
+    <meta property="og:url" content="https://nsisong-byuidaho.github.io/wdd231/Project/book.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/base.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- JavaScript -->
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/destinations.js"></script>
+    <script src="scripts/book.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Okoli Travels</h1>
+    <nav>
+        <button id="menu" class="ham-button">
+            ☰
+        </button>
+        <ul class="navigation">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="book.html">Book a Trip</a></li>
+        </ul>
+    </nav>
+    </header>
+  <main>
+    <section class="booking-section">
+      <h2>Book Your Dream Trip</h2>
+      <form action="confirmation.html" method="get" id="bookingForm">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="destination">Destination:</label>
+        <select id="destination" name="destination" required>
+          <option value="">-- Select a Destination --</option>
+          <option value="Paris">Paris</option>
+          <option value="Tokyo">Tokyo</option>
+          <option value="Bali">Bali</option>
+          <option value="New York City">New York City</option>
+          <option value="Victoria Falls">Victoria Falls</option>
+          <option value="Petra">Petra</option>
+          <option value="Machu Picchu">Machu Picchu</option>
+          <option value="Cairo">Cairo</option>
+          <option value="Santorini">Santorini</option>
+          <option value="Sydney">Sydney</option>
+          <option value="Reykjavik">Reykjavik</option>
+          <option value="Rome">Rome</option>
+          <option value="Cape Town">Cape Town</option>
+          <option value="Dubai">Dubai</option>
+          <option value="Banff">Banff</option>
+        </select>
+
+        <label for="travelDate">Travel Date:</label>
+        <input type="date" id="travelDate" name="travelDate" required />
+
+        <label for="travelers">Number of Travelers:</label>
+        <input type="number" id="travelers" name="travelers" min="1" required />
+
+        <fieldset>
+          <legend>Trip Type:</legend>
+          <label><input type="radio" name="tripType" value="Adventure" required /> Adventure</label>
+          <label><input type="radio" name="tripType" value="Relaxation" /> Relaxation</label>
+          <label><input type="radio" name="tripType" value="Cultural" /> Cultural</label>
+        </fieldset>
+
+        <label for="notes">Additional Notes:</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Any special requests?"></textarea>
+
+        <button type="submit">Book Now</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Okoli Travels | Adventure. Experience. Explore.</p> Okoli Travels. All rights reserved. </p>
+  </footer>
+</body>
+</html>
